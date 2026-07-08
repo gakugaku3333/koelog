@@ -8,7 +8,6 @@ export interface DraftRecord {
 
 export type OutboxAction =
   | { kind: 'saveEntry'; date: string; time: string; organized: string; raw: string }
-  | { kind: 'updateEntry'; date: string; time: string; organized: string; raw: string }
   | { kind: 'deleteEntry'; date: string; time: string }
 
 export interface OutboxRecord {
