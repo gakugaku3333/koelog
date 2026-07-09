@@ -1,10 +1,10 @@
 # 進捗・決定事項
 
-計画ドキュメントは `../音声振り返り日誌/` 配下(00〜04)。実装はこのファイルに進捗と決定事項を追記していく。
+計画ドキュメントは `../` (このリポジトリの親フォルダ)配下(00〜04)。実装はこのファイルに進捗と決定事項を追記していく。
 
 ## フェーズ0: プロジェクト土台とデプロイパイプライン
 
-- Vite + React + TypeScript で `koelog-app` を作成。Tailwind は v4 のため `@tailwindcss/vite` プラグイン方式を採用(`tailwind.config.js` 不要)
+- Vite + React + TypeScript でアプリ(`音声振り返り日誌/app`、GitHub上は `koelog` リポジトリ)を作成。Tailwind は v4 のため `@tailwindcss/vite` プラグイン方式を採用(`tailwind.config.js` 不要)
 - `vite-plugin-pwa` でマニフェスト・Service Worker を設定。`base: '/koelog/'` (GitHub Pages のリポジトリ名に合わせる)
 - Vitest は `vitest/config` の `defineConfig` を使わないと `vite.config.ts` の `test` フィールドが型エラーになる点に注意
 - アイコンは `sharp` を一時インストールしてSVGから192/512のPNGを生成後、`sharp` はアンインストール(依存を増やさない方針のため)
